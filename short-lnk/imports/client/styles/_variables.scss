@@ -1,0 +1,60 @@
+// Colors
+$brand_primary: #5b4681;
+
+$grey: #dddddd;
+$white: #ffffff;
+$light-grey: #f9f9f9;
+$dark-grey: #777777;
+
+// Spacing
+$space: 1.4rem;
+$space_secondary: 1rem;
+$site_max-width: 50rem;
+
+// Font Sizes
+$base_font-size: 1.4rem;
+$large_font-size: 1.8rem;
+
+// Borders
+$border_size: 1px;
+$border_style: solid;
+
+// Form inputs
+$input_border-color: $grey;
+$input_spacing: $space_secondary;
+
+// Boxed View variables
+$boxed-view_overlay-bg: $grey;
+$boxed-view_bg: $white;
+
+// Button
+$button_bg: $brand_primary;
+$button_color: $white;
+$button_spacing: $space_secondary;
+$button-pill_color: $brand_primary;
+$button-pill_right-margin: $space / 2;
+$button-secondary_bg: $light-grey;
+$button-secondary_color: $dark-grey;
+$button-secondary_border-color: $grey;
+
+// Header
+$header_bg: $brand_primary;
+$header_color: $white;
+$header_padding: $space;
+
+// Page
+$page-content_max-width: $site_max-width;
+$page-content_padding: $space;
+
+// Checkbox
+$checkbox_margin: $space;
+$checkbox-box_margin: $space / 2;
+
+// Item
+$item_bg: $light-grey;
+$item_border-size: $border_size;
+$item_border-style: $border_style;
+$item_border-color: darken($item_bg, 8%);
+$item_margin: $space;
+$item_padding: $space;
+$item-message_color: $dark-grey;
