@@ -6,13 +6,13 @@ import ReactDOM from 'react-dom';
 
 import {Players} from './../imports/api/players.js';
 
-const renderPlayers = function(playersList) {
-	return playersList.map(function(player) {
+const renderPlayers = (playersList) => {
+	return playersList.map((player) => {
 		return <p key={player._id}>{player.name} has {player.score} point(s).</p>;
 	});
 };
 
-const handleSubmit = function(event) {
+const handleSubmit = (event) => {
 	event.preventDefault();
 
 	var playerName = event.target.playerName.value;
@@ -25,10 +25,10 @@ const handleSubmit = function(event) {
 	}
 };
 
-Meteor.startup(function() {
+Meteor.startup(() => {
 	var title = 'Account Settings';
 	var name = 'Jason';
-	Tracker.autorun(function () {
+	Tracker.autorun(() => {
 		var players = Players.find().fetch();
 		var jsx = (<div>
 			<h1>{title}</h1>
