@@ -8,7 +8,14 @@ import {Players} from './../imports/api/players.js';
 
 const renderPlayers = (playersList) => {
 	return playersList.map((player) => {
-		return <p key={player._id}>{player.name} has {player.score} point(s).</p>;
+		return (
+			<p key={player._id}>
+				{player.name} has {player.score} point(s).
+				<button onClick={() => {
+					Players.remove({'_id': player._id});
+				}}>X</button>
+			</p>
+		);
 	});
 };
 
