@@ -1,3 +1,12 @@
+// Variables
+$green: #e4ede0;
+$green-alt: darken($green, 15%);
+$blue: #dfe7ed;
+$blue-alt: darken($blue, 15%);
+$red: #eddfdf;
+$red-alt: darken($red, 15%);
+
+// Style
 * {
 	margin: 0;
 	padding: 0;
@@ -23,6 +32,8 @@ h1 {
 	font-size: 2.4rem;
 }
 
+
+// Imports
 @import './components/_title-bar.scss';
 @import './components/_wrapper.scss';
 @import './components/_item.scss';
