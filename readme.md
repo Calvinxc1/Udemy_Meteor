@@ -1,4 +1,3 @@
-# Meteor Training via Udemy's Meteor React training course.
+# Meteor Training via Andrew Mead's Meteor React course on Udemy.
 
-## Author:
-Jason M. Cherry
+## Author: Jason M. Cherry
