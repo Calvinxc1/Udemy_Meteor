@@ -5,19 +5,18 @@ import TitleBar from './TitleBar.jsx';
 import PlayerList from './PlayerList.jsx';
 import AddPlayer from './AddPlayer.jsx';
 
+import {Players} from './../api/players.js';
+
 export default class App extends React.Component {
 	render() {
 		return (<div>
-			<TitleBar title={this.props.title} />
+			<TitleBar title={'Score Keep'} subtitle="Created by Jason Cherry"/>
 			<div className="wrapper">
-				<PlayerList players={this.props.players} />
+				<PlayerList
+					players={Players.find({}, {sort: {score: -1}}).fetch()}
+				/>
 				<AddPlayer />
 			</div>
 		</div>);
 	}
 }
-
-App.propTypes = {
-	title: PropTypes.string.isRequired,
-	players: PropTypes.array.isRequired,
-};
