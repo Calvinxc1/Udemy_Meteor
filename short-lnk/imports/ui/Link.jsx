@@ -9,12 +9,9 @@ class Link extends React.Component {
 
 	render() {
 		return (<div>
-			<form
-				className="form"
-				onSubmit={this.handleSubmit.bind(this)}
-			>
-				<button className="button">Login Page</button>
-			</form>
+			<h1>Your Links</h1>
+			
+			<button onClick={this.handleSubmit.bind(this)}>Logout</button>
 		</div>);
 	}
 }
