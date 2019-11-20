@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import {Accounts} from 'meteor/accounts-base';
+
 export default class Signup extends React.Component {
 	constructor(props) {
 		super(props);
@@ -18,7 +20,14 @@ export default class Signup extends React.Component {
 	onSubmit(event) {
 		event.preventDefault();
 
-		this.setState({error: 'Error test'});
+		var email = this.refs.email.value.trim();
+		var password = this.refs.password.value.trim();
+
+		Accounts.createUser({email, password}, (err) => {
+			console.log('Signup callback', err);
+		});
+
+		//this.setState({error: 'Error test'});
 	}
 
 	render() {
@@ -28,8 +37,18 @@ export default class Signup extends React.Component {
 			{this.state.error ? <p>{this.state.error}</p> : undefined}
 
 			<form onSubmit={this.onSubmit}>
-				<input type="email" name="email" placeholder="Email"/>
-				<input type="password" name="password" placeholder="Password" />
+				<input
+					type="email"
+					ref="email"
+					name="email"
+					placeholder="Email"
+				/>
+				<input
+					type="password"
+					ref="password"
+					name="password"
+					placeholder="Password"
+				/>
 				<button>Create Account</button>
 			</form>
 
